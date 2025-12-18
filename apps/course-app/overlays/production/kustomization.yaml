@@ -2,6 +2,7 @@ namespace: production
 
 resources:
   - ../../base
+  - dragonfly.yaml
   - namespace.yaml
   - hpa.yaml
 
