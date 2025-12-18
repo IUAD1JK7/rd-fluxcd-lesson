@@ -12,8 +12,6 @@ spec:
            labels:
                 app: course-app
         spec:
-           imagePullSecrets:
-             - name: harbor-secret
            containers:
                 -   name: course-app
                     image: demo.goharbor.io/lesson06/course-app:v1.0
