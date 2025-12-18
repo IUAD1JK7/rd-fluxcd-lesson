@@ -1,0 +1,10 @@
+namespace: production
+
+resources:
+  - ../../base
+  - namespace.yaml
+  - hpa.yaml
+
+patches:
+  - path: replicas.yaml  
+  - path: resources.yaml
