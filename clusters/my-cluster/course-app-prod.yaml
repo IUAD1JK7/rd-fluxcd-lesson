@@ -13,5 +13,5 @@ spec:
     name: flux-system
   postBuild:
     substitute:
-      dragonfly_replicas: 2
-      app_replicas: 11
+      dragonfly_replicas: "2"
+      app_replicas: "11"
