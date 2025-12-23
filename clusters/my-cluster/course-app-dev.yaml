@@ -11,3 +11,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
+  postBuild:
+    substitute:
+      dragonfly_replicas: 1
+      app_replicas: 1

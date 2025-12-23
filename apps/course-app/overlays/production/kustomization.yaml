@@ -2,10 +2,8 @@ namespace: production
 
 resources:
   - ../../base
-  - dragonfly.yaml
   - namespace.yaml
   - hpa.yaml
 
 patches:
-  - path: replicas.yaml  
   - path: resources.yaml

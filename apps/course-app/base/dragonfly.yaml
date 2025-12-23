@@ -3,7 +3,7 @@ kind: Dragonfly
 metadata:
   name: dragonfly
 spec:
-  replicas: 2
+  replicas: "${dragonfly_replicas}"
   resources:
     requests:
       cpu: 200m

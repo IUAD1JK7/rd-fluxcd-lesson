@@ -2,8 +2,4 @@ namespace: development
 
 resources:
   - ../../base
-  - dragonfly.yaml
   - namespace.yaml
-
-patches:
-  - path: replicas.yaml

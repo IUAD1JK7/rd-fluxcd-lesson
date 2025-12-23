@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
     name: course-app
 spec:
-    replicas: 11
+    replicas: "${app_replicas}"
     selector:
         matchLabels:
             app: course-app
@@ -29,22 +29,9 @@ spec:
                           port: 8080
                        initialDelaySeconds: 10
                        periodSeconds: 5
-                    env:
-                      - name: APP_MESSAGE
-                        valueFrom:
-                          configMapKeyRef:
-                            name: web-config
-                            key: APP_MESSAGE
-                      - name: APP_STORE
-                        valueFrom:
-                          configMapKeyRef:
-                            name: web-config
-                            key: APP_STORE
-                      - name: APP_REDIS_URL
-                        valueFrom:
-                          configMapKeyRef:
-                            name: web-config
-                            key: APP_REDIS_URL
+                    envFrom:
+                      - configMapRef: 
+                          name: web-config
     strategy:
        type: RollingUpdate
        rollingUpdate:
